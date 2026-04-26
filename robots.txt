@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Block TMS page from indexing until it launches
+Disallow: /tms.html
+
+Sitemap: https://www.montereybaypsychiatry.com/sitemap.xml
