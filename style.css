@@ -1,28 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
 
 :root {
-  --navy: #0f2037;
-  --navy-mid: #1a3050;
-  --teal: #2a7d6f;
-  --teal-light: #3a9d8a;
-  --teal-pale: #e8f4f2;
-  --sand: #f5f0e8;
-  --sand-dark: #ede6d6;
+  --navy: #0c3954;
+  --navy-mid: #0a3428;
+  --teal: #106552;
+  --teal-light: #28beac;
+  --teal-pale: #e3f4f6;
+  --accent: #ffce4c;
+  --sky: #9ccbd5;
+  --sand: #f5f8f8;
+  --sand-dark: #e0eff2;
   --white: #ffffff;
-  --gray-100: #f8f9fa;
-  --gray-200: #eef0f2;
-  --gray-400: #9aa3ae;
-  --gray-600: #5a6470;
-  --gray-800: #2c333b;
-  --text: #1e2830;
-  --font-display: 'DM Serif Display', Georgia, serif;
+  --gray-100: #f4f7f8;
+  --gray-200: #dde8ec;
+  --gray-400: #7a9aaa;
+  --gray-600: #3a5a6a;
+  --gray-800: #0c2030;
+  --text: #0c2030;
+  --font-display: 'Cinzel', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
-  --nav-height: 72px;
+  --nav-height: 76px;
   --max-width: 1100px;
   --radius: 4px;
   --radius-lg: 12px;
-  --shadow: 0 2px 16px rgba(15,32,55,0.08);
-  --shadow-lg: 0 8px 40px rgba(15,32,55,0.13);
+  --shadow: 0 2px 16px rgba(12,57,84,0.09);
+  --shadow-lg: 0 8px 40px rgba(12,57,84,0.15);
   --transition: 0.22s ease;
 }
 
@@ -54,15 +56,19 @@ nav {
   display: flex; align-items: center; justify-content: space-between;
 }
 .nav-logo {
-  display: flex; flex-direction: column; gap: 1px;
+  display: flex; align-items: center; gap: 10px;
   text-decoration: none;
+}
+.nav-logo img {
+  height: 48px; width: auto;
 }
 .nav-logo-name {
   font-family: var(--font-display);
-  font-size: 18px; color: var(--navy); letter-spacing: -0.01em; line-height: 1.2;
+  font-size: 15px; color: var(--navy); letter-spacing: 0.04em; line-height: 1.2;
+  font-weight: 600;
 }
 .nav-logo-tag {
-  font-size: 11px; color: var(--teal); letter-spacing: 0.04em;
+  font-size: 10px; color: var(--teal); letter-spacing: 0.06em;
   text-transform: uppercase; font-weight: 500;
 }
 .nav-links {
@@ -99,7 +105,7 @@ main { padding-top: var(--nav-height); }
 }
 .hero-eyebrow {
   font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--teal); margin-bottom: 20px;
+  text-transform: uppercase; color: var(--teal-light); margin-bottom: 20px;
   display: flex; align-items: center; gap: 12px;
 }
 .hero-eyebrow::before {
@@ -123,9 +129,9 @@ main { padding-top: var(--nav-height); }
   font-weight: 600; font-size: 15px; letter-spacing: 0.02em;
   text-decoration: none; border: none; cursor: pointer;
   transition: background var(--transition), transform var(--transition);
-  display: inline-block;
+  display: inline-block; font-family: var(--font-body);
 }
-.btn-primary:hover { background: var(--teal-light); transform: translateY(-1px); }
+.btn-primary:hover { background: var(--navy); transform: translateY(-1px); }
 .btn-secondary {
   color: var(--navy); font-weight: 500; font-size: 15px;
   text-decoration: none; border-bottom: 1px solid var(--navy);
@@ -192,7 +198,7 @@ section { padding: 96px 32px; }
   color: var(--navy); line-height: 1.18; letter-spacing: -0.02em;
   margin-bottom: 20px;
 }
-.section-title em { font-style: italic; color: var(--teal); }
+.section-title em { font-style: italic; color: var(--teal-light); }
 .section-sub {
   font-size: 16px; color: var(--gray-600); max-width: 560px; line-height: 1.7;
   margin-bottom: 56px;
@@ -403,7 +409,7 @@ footer {
   padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .footer-brand-name {
-  font-family: var(--font-display); font-size: 20px; color: var(--white); margin-bottom: 6px;
+  font-family: var(--font-display); font-size: 16px; color: var(--white); margin-bottom: 6px; letter-spacing: 0.06em;
 }
 .footer-brand-tag { font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
 .footer-brand-desc { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.65; }
