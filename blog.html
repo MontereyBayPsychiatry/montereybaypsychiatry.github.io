@@ -95,9 +95,12 @@
     }
     .blog-featured:hover { box-shadow: var(--shadow-lg); }
     .blog-featured-image {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
       min-height: 320px;
       display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .blog-featured-image img {
+      width: 100%; height: 100%; object-fit: cover;
     }
     .blog-featured-body {
       padding: 48px 40px;
@@ -141,7 +144,7 @@
     @media (max-width: 900px) {
       .blog-grid { grid-template-columns: 1fr 1fr; }
       .blog-featured { grid-template-columns: 1fr; }
-      .blog-featured-image { min-height: 200px; }
+      .blog-featured-image { min-height: 220px; }
       .blog-featured-body { padding: 32px 24px; }
     }
     @media (max-width: 600px) {
@@ -193,7 +196,11 @@
       <!-- FEATURED POST -->
       <a href="posts/does-my-child-have-adhd.html" class="blog-featured fade-in">
         <div class="blog-featured-image">
-          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" opacity="0.3"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+          <img
+            src="images/blog/adhd-child-hero.jpg"
+            alt="Child working at a desk — featured article on ADHD in children"
+            loading="eager"
+          />
         </div>
         <div class="blog-featured-body">
           <p class="blog-featured-tag">ADHD</p>
@@ -221,21 +228,15 @@
       </div>
 
       <!-- BLOG GRID -->
-      <!-- ═══════════════════════════════════════════════════════════════════
-           TO ADD A NEW POST:
-           1. Copy one .blog-card block below
-           2. Update: href, data-tags, category label, title, excerpt, date, read time
-           3. Create the matching post file in the /posts/ folder
-           4. Upload both files to GitHub
-           See the HOW TO UPDATE section at the bottom of this file
-      ════════════════════════════════════════════════════════════════════ -->
       <div class="blog-grid" id="blog-grid">
 
         <a href="posts/does-my-child-have-adhd.html" class="blog-card fade-in" data-tags="adhd pediatric">
           <div class="blog-card-image">
-            <div class="blog-card-image-placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-            </div>
+            <img
+              src="images/blog/adhd-child-hero.jpg"
+              alt="Child at a desk — ADHD evaluation for children in Monterey, CA"
+              loading="lazy"
+            />
           </div>
           <div class="blog-card-body">
             <p class="blog-card-tag">ADHD · Pediatric</p>
@@ -252,9 +253,11 @@
 
         <a href="posts/anxiety-in-teens.html" class="blog-card fade-in" data-tags="anxiety pediatric">
           <div class="blog-card-image">
-            <div class="blog-card-image-placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </div>
+            <img
+              src="images/blog/teen-anxiety-hero.jpg"
+              alt="Teenager outdoors in a calm setting — teen anxiety treatment in Monterey, CA"
+              loading="lazy"
+            />
           </div>
           <div class="blog-card-body">
             <p class="blog-card-tag">Anxiety · Pediatric</p>
@@ -271,9 +274,11 @@
 
         <a href="posts/postpartum-depression-vs-baby-blues.html" class="blog-card fade-in" data-tags="perinatal depression">
           <div class="blog-card-image">
-            <div class="blog-card-image-placeholder">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-            </div>
+            <img
+              src="images/blog/postpartum-hero.jpg"
+              alt="Mother holding newborn — postpartum depression treatment in Monterey, CA"
+              loading="lazy"
+            />
           </div>
           <div class="blog-card-body">
             <p class="blog-card-tag">Perinatal · Depression</p>
@@ -291,7 +296,7 @@
       </div>
       <!-- END BLOG GRID — add new .blog-card blocks above this line -->
 
-      <!-- Empty state (shown when filter has no results) -->
+      <!-- Empty state -->
       <div id="no-results" style="display:none; text-align:center; padding:60px 20px; color:var(--gray-400);">
         <p style="font-size:16px;">No posts in this category yet — check back soon.</p>
       </div>
