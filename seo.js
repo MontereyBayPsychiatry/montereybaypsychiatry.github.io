@@ -56,11 +56,11 @@ const PHYSICIAN_SCHEMA = {
   "@id": "https://www.montereybaypsychiatry.com/#physician",
   "name": "Monterey Bay Psychiatry Provider",
   "jobTitle": "Psychiatric-Mental Health Nurse Practitioner",
-  "description": "Board-certified Psychiatric-Mental Health Nurse Practitioner (PMHNP-BC) and Certified Pediatric Nurse Practitioner (CPNP) providing psychiatric care for children, teens, and adults in Monterey, CA and throughout California via telehealth.",
+  "description": "Doctor of Nursing Practice and dual-certified Psychiatric-Mental Health Nurse Practitioner (PMHNP-PC) and Certified Pediatric Nurse Practitioner (CPNP-PC) providing psychiatric care for children, teens, and adults in Monterey, CA and throughout California via telehealth.",
   "medicalSpecialty": ["Psychiatry", "PediatricCare"],
   "hasCredential": [
-    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Board Certification", "name": "PMHNP-BC — Psychiatric-Mental Health Nurse Practitioner, Board Certified" },
-    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Board Certification", "name": "CPNP — Certified Pediatric Nurse Practitioner" }
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Board Certification", "name": "PMHNP-PC — Psychiatric-Mental Health Nurse Practitioner, Board Certified" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Board Certification", "name": "CPNP-PC — Certified Pediatric Nurse Practitioner" }
   ],
   "worksFor": { "@id": "https://www.montereybaypsychiatry.com/#organization" },
   "workLocation": {
