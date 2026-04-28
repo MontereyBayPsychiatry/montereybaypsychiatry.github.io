@@ -11,6 +11,22 @@
   <meta property="og:image" content="https://www.montereybaypsychiatry.com/images/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .booking-section {
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .booking-section iframe {
+      display: block;
+      width: 100%;
+      min-height: 600px;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
 
@@ -61,15 +77,15 @@
         <div class="fade-in" style="display:grid; grid-template-columns:80px 1fr; gap:32px; padding:32px 0; border-bottom:1px solid var(--gray-200); align-items:start;">
           <div style="font-family:var(--font-display); font-size:52px; color:var(--teal-pale); line-height:1; text-align:center;">01</div>
           <div>
-            <h3 style="font-size:18px; font-weight:700; color:var(--navy); margin-bottom:10px;">Reach Out</h3>
-            <p style="font-size:15px; color:var(--gray-600); line-height:1.7; max-width:600px;">Complete the contact form on our <a href="contact.html" style="color:var(--teal);">Contact page</a> or send us an email at <a href="mailto:office@montereybaypsychiatry.com" style="color:var(--teal);">office@montereybaypsychiatry.com</a>. Let us know a bit about who you are, who needs care (yourself or a family member), and what's bringing you in. We'll respond within one business day.</p>
+            <h3 style="font-size:18px; font-weight:700; color:var(--navy); margin-bottom:10px;">Book Online</h3>
+            <p style="font-size:15px; color:var(--gray-600); line-height:1.7; max-width:600px;">Use the booking widget below to schedule your first appointment directly. Select your appointment type, choose a time that works for you, and complete the brief intake questions. You'll receive a confirmation by email immediately.</p>
           </div>
         </div>
         <div class="fade-in" style="display:grid; grid-template-columns:80px 1fr; gap:32px; padding:32px 0; border-bottom:1px solid var(--gray-200); align-items:start;">
           <div style="font-family:var(--font-display); font-size:52px; color:var(--teal-pale); line-height:1; text-align:center;">02</div>
           <div>
             <h3 style="font-size:18px; font-weight:700; color:var(--navy); margin-bottom:10px;">Brief Intake Conversation</h3>
-            <p style="font-size:15px; color:var(--gray-600); line-height:1.7; max-width:600px;">We may follow up with a few quick questions to make sure we're a good fit for your needs, confirm your location (for telehealth eligibility), and review our financial policy before scheduling.</p>
+            <p style="font-size:15px; color:var(--gray-600); line-height:1.7; max-width:600px;">We may follow up with a few quick questions to make sure we're a good fit for your needs, confirm your location (for telehealth eligibility), and review our financial policy before your appointment.</p>
           </div>
         </div>
         <div class="fade-in" style="display:grid; grid-template-columns:80px 1fr; gap:32px; padding:32px 0; border-bottom:1px solid var(--gray-200); align-items:start;">
@@ -95,9 +111,27 @@
         </div>
       </div>
 
-      <div style="text-align:center;">
-        <a href="contact.html" class="btn-primary">Request Your First Appointment</a>
+      <!-- BOOKING WIDGET -->
+      <div class="fade-in" style="margin-bottom:64px;">
+        <p class="section-label">Schedule Now</p>
+        <h2 class="section-title" style="margin-bottom:8px;">Book your first appointment</h2>
+        <p style="font-size:15px; color:var(--gray-600); line-height:1.7; margin-bottom:24px;">New patients typically seen within 1–2 weeks. No referral required.</p>
+        <div class="booking-section">
+          <iframe
+            title="Carepatron Online Booking"
+            src="https://book.carepatron.com/Monterey-Bay-Psychiatry/Halleh?p=mbg954bsRVW7E1zZdAtyRg&s=ORxl3vEu&e=i"
+            width="100%"
+            height="600"
+            style="border:0;"
+            loading="lazy"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p style="font-size:13px; color:var(--gray-400); margin-top:12px; line-height:1.6;">
+          Questions before booking? Email us at <a href="mailto:office@montereybaypsychiatry.com" style="color:var(--teal);">office@montereybaypsychiatry.com</a>.
+        </p>
       </div>
+
     </div>
   </section>
 

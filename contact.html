@@ -11,6 +11,22 @@
   <meta property="og:image" content="https://www.montereybaypsychiatry.com/images/logo.png" />
   <meta name="twitter:card" content="summary" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .booking-widget-wrap {
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      min-height: 600px;
+    }
+    .booking-widget-wrap iframe {
+      display: block;
+      width: 100%;
+      min-height: 600px;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
 
@@ -59,7 +75,7 @@
           <div>
             <p class="section-label fade-in">Contact Information</p>
             <h2 class="section-title fade-in" style="margin-bottom:8px;">Let's connect</h2>
-            <p style="font-size:15px; color:var(--gray-600); line-height:1.7; margin-bottom:32px;" class="fade-in">Fill out the form and we'll be in touch within one business day to discuss your needs and schedule your first appointment.</p>
+            <p style="font-size:15px; color:var(--gray-600); line-height:1.7; margin-bottom:32px;" class="fade-in">Book your appointment directly using the scheduler, or email us with questions. We respond within one business day.</p>
           </div>
 
           <div class="contact-detail fade-in">
@@ -105,103 +121,27 @@
           <!-- Crisis box -->
           <div class="fade-in" style="margin-top:8px; padding:20px 24px; background:var(--gray-100); border-radius:var(--radius-lg); border-left:3px solid #c0392b;">
             <p style="font-size:13px; font-weight:700; color:#c0392b; margin-bottom:6px;">⚠️ Mental Health Emergency</p>
-            <p style="font-size:13px; color:var(--gray-600); line-height:1.6;">This form is not monitored 24/7. If you or someone you know is in crisis, please call or text <strong>988</strong>, text HOME to <strong>741741</strong>, or call <strong>911</strong>.</p>
+            <p style="font-size:13px; color:var(--gray-600); line-height:1.6;">This booking system is not monitored 24/7. If you or someone you know is in crisis, please call or text <strong>988</strong>, text HOME to <strong>741741</strong>, or call <strong>911</strong>.</p>
           </div>
         </div>
 
-        <!-- RIGHT: Form -->
+        <!-- RIGHT: Carepatron Booking Widget -->
         <div class="fade-in">
-          <!-- Replace YOUR_FORMSPREE_ID with your actual Formspree form ID after signing up at formspree.io -->
-          <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" style="background:var(--white); padding:40px; border-radius:var(--radius-lg); border:1.5px solid var(--gray-200); box-shadow:var(--shadow);">
-            <h3 style="font-family:var(--font-display); font-size:22px; color:var(--navy); margin-bottom:24px;">New Patient Inquiry</h3>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="first-name">First Name *</label>
-                <input type="text" id="first-name" name="first_name" required placeholder="Jane" />
-              </div>
-              <div class="form-group">
-                <label for="last-name">Last Name *</label>
-                <input type="text" id="last-name" name="last_name" required placeholder="Smith" />
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email Address *</label>
-              <input type="email" id="email" name="email" required placeholder="jane@example.com" />
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="(831) 555-0000" />
-            </div>
-
-            <div class="form-group">
-              <label for="patient-type">Who is seeking care? *</label>
-              <select id="patient-type" name="patient_type" required>
-                <option value="" disabled selected>Select one</option>
-                <option value="myself-adult">Myself (adult)</option>
-                <option value="myself-teen">Myself (teen, 13–17)</option>
-                <option value="child">My child (under 13)</option>
-                <option value="teen">My teen (13–17)</option>
-                <option value="other">Other / unsure</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="reason">Primary reason for seeking care *</label>
-              <select id="reason" name="reason" required>
-                <option value="" disabled selected>Select one</option>
-                <option value="adhd">ADHD evaluation or treatment</option>
-                <option value="anxiety">Anxiety</option>
-                <option value="depression">Depression or mood concerns</option>
-                <option value="trauma">Trauma or PTSD</option>
-                <option value="perinatal">Pregnancy or postpartum mental health</option>
-                <option value="general">General psychiatric evaluation</option>
-                <option value="medication">Medication management (existing diagnosis)</option>
-                <option value="other">Other / multiple concerns</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="appointment-type">Appointment preference</label>
-              <select id="appointment-type" name="appointment_type">
-                <option value="no-preference">No preference</option>
-                <option value="telehealth">Telehealth (video)</option>
-                <option value="in-person">In-person (Monterey, CA)</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Anything else you'd like us to know?</label>
-              <textarea id="message" name="message" placeholder="Brief description of what's going on, any previous psychiatric history, or questions you have..."></textarea>
-            </div>
-
-            <div class="form-group">
-              <label style="display:flex; align-items:flex-start; gap:10px; cursor:pointer; font-weight:400; color:var(--gray-600); font-size:14px; letter-spacing:0;">
-                <input type="checkbox" name="consent" required style="width:auto; margin-top:3px; flex-shrink:0;" />
-                I understand that submitting this form does not establish a patient-provider relationship and that Monterey Bay Psychiatry will contact me to discuss next steps. *
-              </label>
-            </div>
-
-            <!-- Hidden spam honeypot -->
-            <input type="text" name="_gotcha" style="display:none" />
-            <input type="hidden" name="_subject" value="New Patient Inquiry — Monterey Bay Psychiatry" />
-
-            <button type="submit" class="btn-primary" style="width:100%; text-align:center; border:none; cursor:pointer; font-size:16px; padding:16px;">
-              Submit Inquiry
-            </button>
-
-            <p class="form-notice">
-              We respond to all inquiries within one business day (Monday–Friday). This form is not monitored after hours or on weekends. For urgent (non-emergency) questions, email office@montereybaypsychiatry.com directly.
-            </p>
-          </form>
-
-          <div id="form-success" class="form-success">
-            <div style="font-size:48px; margin-bottom:16px;">✅</div>
-            <h3>Message received!</h3>
-            <p>Thank you for reaching out to Monterey Bay Psychiatry. We'll be in touch within one business day.</p>
+          <h3 style="font-family:var(--font-display); font-size:22px; color:var(--navy); margin-bottom:20px;">Book Your Appointment</h3>
+          <div class="booking-widget-wrap">
+            <iframe
+              title="Carepatron Online Booking"
+              src="https://book.carepatron.com/Monterey-Bay-Psychiatry/Halleh?p=mbg954bsRVW7E1zZdAtyRg&s=ORxl3vEu&e=i"
+              width="100%"
+              height="600"
+              style="border:0;"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
           </div>
+          <p style="font-size:13px; color:var(--gray-400); margin-top:12px; line-height:1.6;">
+            Prefer to email? Reach us at <a href="mailto:office@montereybaypsychiatry.com" style="color:var(--teal);">office@montereybaypsychiatry.com</a>. We respond within one business day.
+          </p>
         </div>
 
       </div>
