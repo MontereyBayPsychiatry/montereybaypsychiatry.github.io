@@ -45,7 +45,7 @@ const ORG_SCHEMA = {
     { "@type": "MedicalProcedure", "name": "Child and Adolescent Psychiatry", "description": "Specialized psychiatric care for children and adolescents ages 5–17" }
   ],
   "hasMap": "https://maps.google.com/?q=Monterey,CA",
-  "priceRange": "$175–$500",
+  "priceRange": "$175–$1,000",
   "paymentAccepted": "Cash, Credit Card",
   "currenciesAccepted": "USD"
 };
