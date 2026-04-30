@@ -1,5 +1,4 @@
 // seo.js — shared schema markup injected per page
-// Each page calls initSchema(type, data) on load
 
 function injectSchema(obj) {
   const s = document.createElement('script');
@@ -16,15 +15,19 @@ const ORG_SCHEMA = {
   "alternateName": "Monterey Bay Psychiatry PMHNP",
   "url": "https://www.montereybaypsychiatry.com",
   "logo": "https://www.montereybaypsychiatry.com/images/logo.png",
-  "description": "Monterey Bay Psychiatry is a hybrid telehealth and in-person psychiatric practice serving children, teens, and adults ages 5–85 in Monterey, CA and throughout California. Specializing in ADHD evaluation and treatment, anxiety, depression, trauma, and perinatal mental health.",
+  "telephone": "+18312003758",
   "email": "office@montereybaypsychiatry.com",
+  "description": "Monterey Bay Psychiatry is a hybrid telehealth and in-person psychiatric practice serving children, teens, and adults ages 5–85 in Carmel Valley, CA and throughout California. Specializing in ADHD evaluation and treatment, anxiety, depression, trauma, and perinatal mental health.",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Monterey",
+    "streetAddress": "126 Clocktower Place, Suite 104",
+    "addressLocality": "Carmel Valley",
     "addressRegion": "CA",
+    "postalCode": "93923",
     "addressCountry": "US"
   },
   "areaServed": [
+    { "@type": "City", "name": "Carmel Valley" },
     { "@type": "City", "name": "Monterey" },
     { "@type": "City", "name": "Salinas" },
     { "@type": "City", "name": "Pacific Grove" },
@@ -32,11 +35,7 @@ const ORG_SCHEMA = {
     { "@type": "City", "name": "Seaside" },
     { "@type": "State", "name": "California" }
   ],
-  "medicalSpecialty": [
-    "Psychiatry",
-    "PediatricCare",
-    "MentalHealth"
-  ],
+  "medicalSpecialty": ["Psychiatry", "PediatricCare", "MentalHealth"],
   "availableService": [
     { "@type": "MedicalProcedure", "name": "Psychiatric Evaluation", "description": "Comprehensive initial psychiatric assessment for new patients ages 5–85" },
     { "@type": "MedicalProcedure", "name": "ADHD Evaluation", "description": "Comprehensive ADHD evaluation including clinical interview, validated rating scales, and diagnostic assessment" },
@@ -44,7 +43,7 @@ const ORG_SCHEMA = {
     { "@type": "MedicalProcedure", "name": "Perinatal Psychiatry", "description": "Psychiatric care for pregnancy and postpartum mood and anxiety disorders" },
     { "@type": "MedicalProcedure", "name": "Child and Adolescent Psychiatry", "description": "Specialized psychiatric care for children and adolescents ages 5–17" }
   ],
-  "hasMap": "https://maps.google.com/?q=Monterey,CA",
+  "hasMap": "https://maps.google.com/?q=126+Clocktower+Place+Carmel+Valley+CA",
   "priceRange": "$175–$1,000",
   "paymentAccepted": "Cash, Credit Card",
   "currenciesAccepted": "USD"
@@ -54,9 +53,9 @@ const PHYSICIAN_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Physician",
   "@id": "https://www.montereybaypsychiatry.com/#physician",
-  "name": "Monterey Bay Psychiatry Provider",
+  "name": "Halleh Entekhabi, DNP, PMHNP-PC, CPNP-PC",
   "jobTitle": "Psychiatric-Mental Health Nurse Practitioner",
-  "description": "Doctor of Nursing Practice and dual-certified Psychiatric-Mental Health Nurse Practitioner (PMHNP-PC) and Certified Pediatric Nurse Practitioner (CPNP-PC) providing psychiatric care for children, teens, and adults in Monterey, CA and throughout California via telehealth.",
+  "description": "Doctor of Nursing Practice and dual-certified Psychiatric-Mental Health Nurse Practitioner (PMHNP-PC) and Certified Pediatric Nurse Practitioner (CPNP-PC) providing psychiatric care for children, teens, and adults in Carmel Valley, CA and throughout California via telehealth.",
   "medicalSpecialty": ["Psychiatry", "PediatricCare"],
   "hasCredential": [
     { "@type": "EducationalOccupationalCredential", "credentialCategory": "Board Certification", "name": "PMHNP-PC — Psychiatric-Mental Health Nurse Practitioner, Board Certified" },
@@ -65,7 +64,13 @@ const PHYSICIAN_SCHEMA = {
   "worksFor": { "@id": "https://www.montereybaypsychiatry.com/#organization" },
   "workLocation": {
     "@type": "Place",
-    "address": { "@type": "PostalAddress", "addressLocality": "Monterey", "addressRegion": "CA" }
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "126 Clocktower Place, Suite 104",
+      "addressLocality": "Carmel Valley",
+      "addressRegion": "CA",
+      "postalCode": "93923"
+    }
   }
 };
 
@@ -75,7 +80,7 @@ const WEBSITE_SCHEMA = {
   "@id": "https://www.montereybaypsychiatry.com/#website",
   "url": "https://www.montereybaypsychiatry.com",
   "name": "Monterey Bay Psychiatry",
-  "description": "Child, Teen & Adult Psychiatry — Monterey, CA and Telehealth throughout California",
+  "description": "Child, Teen & Adult Psychiatry — Carmel Valley, CA and Telehealth throughout California",
   "publisher": { "@id": "https://www.montereybaypsychiatry.com/#organization" },
   "potentialAction": {
     "@type": "SearchAction",
@@ -84,13 +89,10 @@ const WEBSITE_SCHEMA = {
   }
 };
 
-// Called from each page with page-specific schema
 window.initPageSchema = function(pageSchemas) {
-  // Always inject org + physician + website on every page
   injectSchema(ORG_SCHEMA);
   injectSchema(PHYSICIAN_SCHEMA);
   injectSchema(WEBSITE_SCHEMA);
-  // Inject any page-specific schemas
   if (pageSchemas) {
     pageSchemas.forEach(s => injectSchema(s));
   }
