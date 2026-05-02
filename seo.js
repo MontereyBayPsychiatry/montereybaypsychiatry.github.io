@@ -17,17 +17,17 @@ const ORG_SCHEMA = {
   "logo": "https://www.montereybaypsychiatry.com/images/logo.png",
   "telephone": "+18312003758",
   "email": "office@montereybaypsychiatry.com",
-  "description": "Monterey Bay Psychiatry is a hybrid telehealth and in-person psychiatric practice serving children, teens, and adults ages 5–85 in Carmel Valley, CA and throughout California. Specializing in ADHD evaluation and treatment, anxiety, depression, trauma, and perinatal mental health.",
+  "description": "Monterey Bay Psychiatry is a hybrid telehealth and in-person psychiatric practice serving children, teens, and adults ages 5–85 in Carmel, CA and throughout California. Specializing in ADHD evaluation and treatment, anxiety, depression, trauma, and perinatal mental health.",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "126 Clocktower Place, Suite 104",
-    "addressLocality": "Carmel Valley",
+    "streetAddress": "126 Clock Tower Place, Suite 104C",
+    "addressLocality": "Carmel",
     "addressRegion": "CA",
     "postalCode": "93923",
     "addressCountry": "US"
   },
   "areaServed": [
-    { "@type": "City", "name": "Carmel Valley" },
+    { "@type": "City", "name": "Carmel" },
     { "@type": "City", "name": "Monterey" },
     { "@type": "City", "name": "Salinas" },
     { "@type": "City", "name": "Pacific Grove" },
@@ -43,7 +43,7 @@ const ORG_SCHEMA = {
     { "@type": "MedicalProcedure", "name": "Perinatal Psychiatry", "description": "Psychiatric care for pregnancy and postpartum mood and anxiety disorders" },
     { "@type": "MedicalProcedure", "name": "Child and Adolescent Psychiatry", "description": "Specialized psychiatric care for children and adolescents ages 5–17" }
   ],
-  "hasMap": "https://maps.google.com/?q=126+Clocktower+Place+Carmel+Valley+CA",
+  "hasMap": "https://maps.google.com/?q=126+Clock+Tower+Place+Carmel+CA+93923",
   "priceRange": "$175–$1,000",
   "paymentAccepted": "Cash, Credit Card",
   "currenciesAccepted": "USD"
@@ -55,7 +55,7 @@ const PHYSICIAN_SCHEMA = {
   "@id": "https://www.montereybaypsychiatry.com/#physician",
   "name": "Halleh Entekhabi, DNP, PMHNP-PC, CPNP-PC",
   "jobTitle": "Psychiatric-Mental Health Nurse Practitioner",
-  "description": "Doctor of Nursing Practice and dual-certified Psychiatric-Mental Health Nurse Practitioner (PMHNP-PC) and Certified Pediatric Nurse Practitioner (CPNP-PC) providing psychiatric care for children, teens, and adults in Carmel Valley, CA and throughout California via telehealth.",
+  "description": "Doctor of Nursing Practice and dual-certified Psychiatric-Mental Health Nurse Practitioner (PMHNP-PC) and Certified Pediatric Nurse Practitioner (CPNP-PC) providing psychiatric care for children, teens, and adults in Carmel, CA and throughout California via telehealth.",
   "medicalSpecialty": ["Psychiatry", "PediatricCare"],
   "hasCredential": [
     { "@type": "EducationalOccupationalCredential", "credentialCategory": "Board Certification", "name": "PMHNP-PC — Psychiatric-Mental Health Nurse Practitioner, Board Certified" },
@@ -66,8 +66,8 @@ const PHYSICIAN_SCHEMA = {
     "@type": "Place",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "126 Clocktower Place, Suite 104",
-      "addressLocality": "Carmel Valley",
+      "streetAddress": "126 Clock Tower Place, Suite 104C",
+      "addressLocality": "Carmel",
       "addressRegion": "CA",
       "postalCode": "93923"
     }
@@ -80,7 +80,7 @@ const WEBSITE_SCHEMA = {
   "@id": "https://www.montereybaypsychiatry.com/#website",
   "url": "https://www.montereybaypsychiatry.com",
   "name": "Monterey Bay Psychiatry",
-  "description": "Child, Teen & Adult Psychiatry — Carmel Valley, CA and Telehealth throughout California",
+  "description": "Child, Teen & Adult Psychiatry — Carmel, CA and Telehealth throughout California",
   "publisher": { "@id": "https://www.montereybaypsychiatry.com/#organization" },
   "potentialAction": {
     "@type": "SearchAction",
