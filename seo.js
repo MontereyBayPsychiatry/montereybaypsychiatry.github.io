@@ -31,7 +31,7 @@ const ORG_SCHEMA = {
     { "@type": "City", "name": "Monterey" },
     { "@type": "City", "name": "Salinas" },
     { "@type": "City", "name": "Pacific Grove" },
-    { "@type": "City", "name": "Carmel" },
+    { "@type": "City", "name": "Carmel Valley" },
     { "@type": "City", "name": "Seaside" },
     { "@type": "State", "name": "California" }
   ],
@@ -53,12 +53,12 @@ const PHYSICIAN_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "Physician",
   "@id": "https://www.montereybaypsychiatry.com/#physician",
-  "name": "Halleh Entekhabi, DNP, PMHNP-PC, CPNP-PC",
+  "name": "Halleh Entekhabi, DNP, PMHNP-BC, CPNP-PC",
   "jobTitle": "Psychiatric-Mental Health Nurse Practitioner",
-  "description": "Doctor of Nursing Practice and dual-certified Psychiatric-Mental Health Nurse Practitioner (PMHNP-PC) and Certified Pediatric Nurse Practitioner (CPNP-PC) providing psychiatric care for children, teens, and adults in Carmel, CA and throughout California via telehealth.",
+  "description": "Doctor of Nursing Practice and dual-certified Psychiatric-Mental Health Nurse Practitioner (PMHNP-BC) and Certified Pediatric Nurse Practitioner (CPNP-PC) providing psychiatric care for children, teens, and adults in Carmel, CA and throughout California via telehealth.",
   "medicalSpecialty": ["Psychiatry", "PediatricCare"],
   "hasCredential": [
-    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Board Certification", "name": "PMHNP-PC — Psychiatric-Mental Health Nurse Practitioner, Board Certified" },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Board Certification", "name": "PMHNP-BC — Psychiatric-Mental Health Nurse Practitioner, Board Certified" },
     { "@type": "EducationalOccupationalCredential", "credentialCategory": "Board Certification", "name": "CPNP-PC — Certified Pediatric Nurse Practitioner" }
   ],
   "worksFor": { "@id": "https://www.montereybaypsychiatry.com/#organization" },
