@@ -35,7 +35,17 @@
       background: var(--white); border: 1.5px solid var(--gray-200);
       border-radius: var(--radius-lg); box-shadow: var(--shadow); overflow: hidden;
     }
-    .booking-embed iframe { width: 100%; height: 920px; border: 0; display: block; }
+    /* The Healthie/Osmind widget expands and collapses its cards, so its height
+       is dynamic and it does not post a height message — a fixed height either
+       clips it or leaves dead space. Bound the frame to the viewport so it
+       becomes a self-contained scrollable panel (Calendly-style) that never
+       clips into the page below. */
+    .booking-embed iframe {
+      width: 100%; border: 0; display: block;
+      height: 760px;            /* fallback */
+      height: min(760px, 82vh);
+      height: min(760px, 82dvh);
+    }
     .book-fallback { text-align: center; font-size: 14px; color: var(--gray-400); margin-top: 16px; }
     .book-fallback a { color: var(--teal); font-weight: 600; text-decoration: none; }
     .book-fallback a:hover { text-decoration: underline; }
@@ -45,7 +55,13 @@
     }
     .book-note strong { color: var(--navy); }
     .book-crisis { margin-top: 18px; font-size: 13px; color: var(--gray-400); text-align: center; line-height: 1.6; }
-    @media (max-width: 600px) { .booking-embed iframe { height: 1200px; } }
+    @media (max-width: 600px) {
+      .booking-embed iframe {
+        height: 600px;          /* fallback for phones without dvh/min() */
+        height: 78dvh;
+        min-height: 440px; max-height: 680px;
+      }
+    }
   </style>
 </head>
 <body>
